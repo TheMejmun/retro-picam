@@ -4,7 +4,7 @@ mkdir build
 cd build
 
 echo "Configuring CMake"
-cmake ../retro-picam
+cmake ..
 
 echo "Building project"
 cmake --build .
