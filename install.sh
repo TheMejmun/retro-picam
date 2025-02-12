@@ -7,12 +7,9 @@ echo "Downloading opencv"
 cd ~
 mkdir libs
 cd libs
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.11.zip
-ls
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
 unzip opencv.zip
-ls
-mv opencv-4.11 opencv
-ls
+mv opencv-4.x opencv
 cd opencv
 
 echo "Building opencv"
