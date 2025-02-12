@@ -1,23 +1,28 @@
-echo "Installing CMake, ninja, gcc, wget, unzip"
+echo "Installing CMake, ninja, gcc"
 
-sudo apt-get install -y cmake ninja-build g++ wget unzip
+sudo apt-get install -y cmake ninja-build g++
 
-echo "Downloading opencv"
+#echo "Downloading opencv"
+#
+#cd ~
+#mkdir libs
+#cd libs
+#wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+#unzip opencv.zip
+#mv opencv-4.x opencv
+#
+#echo "Building opencv"
+#
+#mkdir -p build && cd build
+#cmake -GNinja ../opencv
+#ninja
+#
+#echo "Result:"
+#
+#sudo apt-get install -y tree
+#tree
 
-cd ~
-mkdir libs
-cd libs
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
-unzip opencv.zip
-mv opencv-4.x opencv
+echo "Installing opencv"
 
-echo "Building opencv"
-
-mkdir -p build && cd build
-cmake -GNinja ../opencv
-ninja
-
-echo "Result:"
-
-sudo apt-get install -y tree
-tree
+# https://askubuntu.com/questions/334158/installing-opencv
+sudo apt-get install -y libopencv-dev
