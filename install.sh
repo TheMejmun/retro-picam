@@ -1,3 +1,5 @@
+sudo apt-get update -y
+
 echo "Installing CMake, ninja, gcc"
 
 sudo apt-get install -y cmake ninja-build g++
@@ -25,4 +27,6 @@ sudo apt-get install -y cmake ninja-build g++
 echo "Installing opencv"
 
 # https://askubuntu.com/questions/334158/installing-opencv
-sudo apt-get install -y libopencv-dev
+sudo apt-get install -y --fix-missing libopencv-dev
+
+sudo apt-get upgrade -y
