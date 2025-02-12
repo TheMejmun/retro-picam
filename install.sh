@@ -8,8 +8,11 @@ cd ~
 mkdir libs
 cd libs
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.11.zip
+ls
 unzip opencv.zip
+ls
 mv opencv-4.11 opencv
+ls
 cd opencv
 
 echo "Building opencv"
@@ -19,5 +22,6 @@ cmake -GNinja ../opencv
 ninja
 
 echo "Result:"
+
 sudo apt-get install -y tree
 tree
