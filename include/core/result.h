@@ -2,8 +2,8 @@
 // Created by Saman on 12.02.25.
 //
 
-#ifndef RASPCAM_RESULT_H
-#define RASPCAM_RESULT_H
+#ifndef RETRO_PICAM_RESULT_H
+#define RETRO_PICAM_RESULT_H
 
 #include "optional"
 #include "string"
@@ -16,4 +16,4 @@ namespace rpc::core {
     };
 }
 
-#endif //RASPCAM_RESULT_H
+#endif //RETRO_PICAM_RESULT_H

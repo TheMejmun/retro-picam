@@ -1,8 +1,12 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include "gui/ocv.h"
+#include "constants.h"
+
 int main() {
-    std::string file= "/Users/samanmiran/Desktop/IMG_20240401_175616.jpg";
+    std::cout << "Hello " << rpc::APP_NAME << std::endl;
+
+    std::string file = "/Users/samanmiran/Desktop/IMG_20240401_175616.jpg";
     rpc::gui::show_image(file);
 
     cv::Mat img = imread(file, cv::IMREAD_COLOR);
