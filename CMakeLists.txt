@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.25)
 project(retro-picam)
 
 set(CMAKE_CXX_STANDARD 20)
