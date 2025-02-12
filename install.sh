@@ -10,7 +10,6 @@ cd libs
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
 unzip opencv.zip
 mv opencv-4.x opencv
-cd opencv
 
 echo "Building opencv"
 
