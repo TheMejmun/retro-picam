@@ -6,13 +6,12 @@
 int main() {
     std::cout << "Hello " << rpc::APP_NAME << std::endl;
 
-    std::string file = "/Users/samanmiran/Desktop/IMG_20240401_175616.jpg";
-    rpc::gui::show_image(file);
+    std::string file = "~/test.jpg";
+//    rpc::gui::show_image(file);
 
     cv::Mat img = imread(file, cv::IMREAD_COLOR);
     size_t size = std::min(img.size[0], img.size[1]);
-
-
+    std::cout << "Crop size: " << size << std:endl;
 
 //    cv::Mat croppedImg;
 //    img(cv::Rect(xMin,yMin,xMax-xMin,yMax-yMin)).copyTo(croppedImg);
