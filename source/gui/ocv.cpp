@@ -25,14 +25,14 @@ void rpc::gui::show_image(const cv::Mat &image, const std::string &title) {
 
 const std::string ASCII_GRADIENT = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
 
-void rpc::gui::show_ascii(const cv::Mat &image){
+void rpc::gui::show_ascii(const cv::Mat &image) {
     assert(image.channels() == 1 && "Image should be bw");
     std::cout << image.rows << " " << image.cols << std::endl;
-    for(int i=0; i<image.rows; i++) { 
-        for(int j=0; j<image.cols; j++) {
-            const float pixel = static_cast<float>(image.at<uint8_t>(i,j)) / 255.0f;
-            const size_t index = static_cast<size_t>((pixel-1e-4) * ASCII_GRADIENT.length());
-            std::cout << ASCII_GRADIENT[index] << " ";       
+    for (int i = 0; i < image.rows; i++) {
+        for (int j = 0; j < image.cols; j++) {
+            const auto pixel = static_cast<float>(image.at<uint8_t>(i, j)) / 255.0f;
+            const auto index = static_cast<size_t>((pixel - 1e-4) * ASCII_GRADIENT.length());
+            std::cout << ASCII_GRADIENT[index] << " ";
         }
         std::cout << std::endl;
     }

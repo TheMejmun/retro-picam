@@ -25,7 +25,7 @@ int main() {
     cv::Mat scaled;
     // INTER_AREA for downscaling, INTER_CUBIC slower, INTER_LINEAR default
     cv::resize(cropped, scaled, cv::Size(128, 128), cv::INTER_LINEAR);
-    
+
     imwrite("/home/saman/test_out.jpg", scaled);
 
     rpc::gui::show_ascii(scaled);
