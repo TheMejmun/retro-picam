@@ -15,10 +15,6 @@ void rpc::gui::show_image(const std::string &filename) {
 
     imshow(filename, img);
     int k = cv::waitKey(0); // Wait for a keystroke in the window
-
-//    if (k == 's') {
-//        imwrite("starry_night.png", img);
-//    }
 }
 
 void rpc::gui::show_image(const cv::Mat &image, const std::string &title) {

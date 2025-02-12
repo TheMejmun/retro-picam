@@ -11,13 +11,18 @@ int main() {
 
     cv::Mat img = imread(file, cv::IMREAD_COLOR);
     size_t size = std::min(img.size[0], img.size[1]);
-    std::cout << "Crop size: " << size << std:endl;
+    std::cout << "Crop size: " << size << std::endl;
 
 //    cv::Mat croppedImg;
 //    img(cv::Rect(xMin,yMin,xMax-xMin,yMax-yMin)).copyTo(croppedImg);
 //
 //    rpc::gui::show_image(croppedImg, "Cropped");
 //    cv::resize()
+
+
+//    if (k == 's') {
+//        imwrite("starry_night.png", img);
+//    }
 
     return 0;
 }
