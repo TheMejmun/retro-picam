@@ -1,3 +1,5 @@
+#!/bin/sh
+
 sudo apt-get update -y
 
 echo "Installing CMake, ninja, gcc"
