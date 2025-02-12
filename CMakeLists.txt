@@ -3,6 +3,15 @@ project(retro-picam)
 
 set(CMAKE_CXX_STANDARD 20)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+message(CMAKE_MODULE_PATH="${CMAKE_MODULE_PATH}")
+message(OpenCV_DIR="${OpenCV_DIR}")
+
+
+execute_process(
+COMMAND ${CMAKE_COMMAND} -E environment
+)
+
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
