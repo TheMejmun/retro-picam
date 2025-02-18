@@ -22,12 +22,20 @@ int main() {
     std::cout << "offsetX: " << offsetX << " offsetY: " << offsetY << std::endl;
     bw(cv::Rect(offsetX, offsetY, size, size)).copyTo(cropped);
 
+    cv::Mat sharp;
+    cv::Mat kernel = (cv::Mat_<double>(3, 3) << 
+        0, -1, 0,
+        -1, 5, -1,
+        0, -1, 0
+    );
+    filter2D(cropped, sharp, -1, kernel);
+
     cv::Mat scaled;
     // INTER_AREA for downscaling, INTER_CUBIC slower, INTER_LINEAR default
-    cv::resize(cropped, scaled, cv::Size(128, 128), cv::INTER_LINEAR);
+    cv::resize(sharp, scaled, cv::Size(128, 128), cv::INTER_LINEAR);
+
 
     imwrite("/home/saman/test_out.jpg", scaled);
-
     rpc::gui::show_ascii(scaled);
 
 //    cv::Mat croppedImg;
