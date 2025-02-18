@@ -1,4 +1,7 @@
 #!/bin/sh
+cwdir="$(pwd)"
+
+cd ~
 
 arch="arm64"
 
@@ -16,3 +19,5 @@ cd libcamera
 meson setup build --buildtype=release -Dpipelines=rpi/vc4,rpi/pisp -Dipas=rpi/vc4,rpi/pisp -Dv4l2=true -Dgstreamer=disabled -Dtest=false -Dlc-compliance=disabled -Dcam=disabled -Dqcam=disabled -Ddocumentation=disabled -Dpycamera=enabled
 ninja -C build install
 cd ..
+
+cd $cwdir
